@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0614">
+<title>For You 💖</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Great+Vibes&family=Poppins:wght@300;400;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="progress"><div id="progressFill"></div></div>
+<button id="backBtn" aria-label="Go back">‹</button>
+
+<main id="stage">
+
+  <!-- 0 · INTRO -->
+  <section class="scene" data-scene="intro">
+    <div class="wrap">
+      <p class="eyebrow reveal">A Dandiya Night Production</p>
+      <p class="presents reveal">presents</p>
+      <h1 class="filmy title reveal">Ajab Prem Ki<br>Ghazab Kahani 2</h1>
+      <p class="tagline reveal">✨ Gand mein keeda Edition ✨</p>
+      <p class="sub reveal">Starring Dr. <span class="her"></span></p>
+      <button class="btn primary pulse reveal" data-next>Tap to begin ▶</button>
+      <p class="hint reveal">🔊 Sound on, please</p>
+    </div>
+  </section>
+
+  <!-- 1 · ECG -->
+  <section class="scene" data-scene="ecg">
+    <div class="wrap">
+      <p class="mono tiny muted">PATIENT MONITOR · BED NO. Jispr marzi aajao · <span class="me"></span></p>
+      <div class="monitor">
+        <div class="bpm"><span class="heart">♥</span><span id="bpm">72</span><small>BPM</small></div>
+        <svg viewBox="0 0 400 230" aria-hidden="true">
+          <path id="ecgPath" d="M0 80 H40 l8 -10 l8 10 H70 l5 -60 l8 120 l6 -60 H110 l8 -12 l8 12 H150 l5 -60 l8 120 l6 -60 H190 l8 -12 l8 12 H230 l5 -60 l8 120 l6 -60 H270 l8 -12 l8 12 H310 l5 -60 l8 120 l6 -60 H350 l8 -12 l8 12 H400"/>
+          <text id="ecgName" x="200" y="205" text-anchor="middle">Kuhu</text>
+        </svg>
+      </div>
+      <p class="line step">Normally, mera dil 72 pe chalta hai…</p>
+      <p class="line step">…but tumhare saath iski lag jaati hai itni ki beech romance concern krne lag jaate ho tum</p>
+      <p class="line step small muted">143 - 170 BPM.</p>
+      <button class="btn step" data-next>Next ›</button>
+    </div>
+  </section>
+
+  <!-- 2 · DIAGNOSIS -->
+  <section class="scene" data-scene="diagnosis">
+    <div class="wrap">
+      <div class="chart reveal">
+        <div class="clip"></div>
+        <div class="chart-head"><span>🏥 Hospital of Hopeless Romantics</span><span class="mono">Case #143</span></div>
+        <div class="row"><b>Patient:</b> <span class="me"></span></div>
+        <div class="row"><b>Attending Doctor:</b> Dr. <span class="her"></span></div>
+
+        <h3>Symptoms</h3>
+        <ul class="checks">
+          <li>Phone dekh ke bina wajah smile karna</li>
+          <li>Har romantic and bakchod reel mein ek hi chehra dikhna</li>
+          <li>Uske saath bhagna imagine krna (Jab kutte peeche ho)</li>
+          <li>Chronic overthinking about one particular doctor</li>
+        </ul>
+
+        <h3>X-Ray Report</h3>
+        <div class="xray">
+          <div class="heart-frame"><div data-photo="1"></div></div>
+          <p class="mono tiny">Foreign object detected inside heart.<br>Refusing to leave. Patient doesn't mind.</p>
+        </div>
+
+        <div class="diag">
+          <b>Diagnosis:</b> <span class="stamp">KUHU-ITIS</span>
+          <p class="tiny">Status: Incurable. Patient does not want a cure.</p>
+        </div>
+
+        <div class="rx">
+          <span class="rx-sym">℞</span>
+          <p>Daily ek <b>jaadu ki jhappi</b>.<br>Refills: unlimited.</p>
+          <p class="tiny">— as prescribed by Sheru bhai</p>
+        </div>
+
+        <button class="btn ghost small dark" id="allIsWell">Tough shift today? Tap here 🤚</button>
+      </div>
+      <button class="btn reveal" data-next>Next ›</button>
+    </div>
+  </section>
+
+  <!-- 3 · DANDIYA -->
+  <section class="scene" data-scene="dandiya">
+    <div class="wrap">
+      <div class="sticks reveal" aria-hidden="true"><i></i><i></i></div>
+      <h2 class="filmy reveal">Ek dandiya night thi…</h2>
+      <p class="story reveal">Lights, dhol, zameen par ghoomta hua ek bag… aur phir, tum.</p>
+      <div class="polaroid reveal"><div data-photo="2"></div><span>where it all started</span></div>
+      <blockquote class="quote reveal">“Kaun tha woh jisne dandiya night pe mudke tumhe nahi dekha? Definitely main nahi.”<cite>— Poo-level confidence 💅</cite></blockquote>
+      <p class="story en reveal">I went there for the garba. I came back thinking only about you.</p>
+      <p class="big en reveal">Aur bc tujhe main rude laga 😭.</p>
+      <button class="btn reveal" data-next>Next ›</button>
+    </div>
+  </section>
+
+  <!-- 4 · MULTIVERSE -->
+  <section class="scene" data-scene="multiverse">
+    <div class="wrap">
+      <p class="eyebrow">Futures checked</p>
+      <div class="counter" id="counter">0</div>
+      <div class="portal" id="portal"><div class="ring"></div></div>
+      <p class="mono uni-name" id="uniName">&nbsp;</p>
+      <p class="uni-text" id="uniText">&nbsp;</p>
+      <p class="line step">Doctor Strange ne 14,000,605 futures dekhe.</p>
+      <p class="line step">Maine har ek mein sirf tumhe dhoondha…</p>
+      <p class="line step">…aur poori kaayanat ne tumhe mujhse milaane ki saazish ki. ✨</p>
+      <p class="big en step">And in every single one of them, I fell for you.</p>
+      <p class="small muted step">Marvel ke paas Avengers hain, Bollywood ke paas Krrish… aur mere paas tum ho mere sherrrrr.</p>
+      <button class="btn step" data-next>Next ›</button>
+    </div>
+  </section>
+
+  <!-- 5 · INFINITY STONES -->
+  <section class="scene" data-scene="stones">
+    <div class="wrap">
+      <h2 class="filmy reveal">The 6 Infinity Stones</h2>
+      <p class="sub reveal">Each one holds a reason I love you.<br>Tap to collect them all.</p>
+      <div class="gauntlet reveal" id="stones"></div>
+      <p class="count reveal"><span id="stoneCount">0</span> / 6 collected</p>
+      <p class="big en step" id="snapLine">*Snap* 🫰 (Bajaadi Chutki 😏).</p>
+      <button class="btn step" id="stonesNext" data-next>Next ›</button>
+    </div>
+  </section>
+
+  <!-- 6 · INTERVAL -->
+  <section class="scene" data-scene="interval">
+    <div class="wrap">
+      <div class="marquee reveal"><span>INTERVAL</span></div>
+      <p class="sub reveal">🍿 Samosa break · Please don't leave your seat</p>
+      <div class="menu reveal">
+        <h3>Filmy Menu 🎬 <small>(extra cringe, free of cost)</small></h3>
+        <ul class="dialogues">
+          <li><b>DDLJ</b>“Bade bade shehron mein… aisi pyaari doctors milti hain, Senorita.” 🌹</li>
+          <li><b>Housefull</b>“Main tumhara Aakhri Pasta hoon… matlab last option nahi, ONLY option.” 🍝</li>
+          <li><b>Happy New Year</b>“Duniya mein do tarah ke log hote hain: winners aur losers. Zindagi har loser ko ek mauka deti hai… ye mera mauka hai.” 🏆</li>
+          <li><b>Hera Pheri</b>“25 din mein paisa double? Nahi… 25 din mein pyaar double.” 💸 (Tujhe toh abhi bhi 4 din hi lgenge)</li>
+          <li><b>Welcome</b>Me after seeing you: "Miracle Miracle” 🎨</li>
+          <li><b>Ajab Prem Ki Ghazab Kahani</b>“Tu meri happy club ki president hai.” 🤡</li>
+          <li><b>Kuch Kuch Hota Hai</b>“Rahul ne kaha tha, pyaar dosti hai… dosti toh ho gayi, ab next step? 😏”</li>
+          <li><b>Munna Bhai MBBS</b>“Doctor sahiba, aapka ilaaj bas ek hai: jaadu ki jhappi.” 🤗</li>
+          <li><b>Om Shanti Om</b>“Ek chutki sindoor ki keemat… arre ruko ruko, abhi sirf girlfriend 😅”</li>
+        </ul>
+      </div>
+      <button class="btn reveal" data-next>Interval over ›</button>
+    </div>
+  </section>
+
+  <!-- 7 · TAP GAME -->
+  <section class="scene" data-scene="game">
+    <div class="wrap">
+      <h2 class="filmy reveal">Beat My Love <span class="emo">💪</span></h2>
+      <p class="sub reveal">Tap as fast as you can to match how much I love you.<br>Easy, right? 😌</p>
+      <div class="meter-labels reveal"><span>Your taps</span><span>My love → ∞</span></div>
+      <div class="meter reveal" id="meter"><div class="meter-fill" id="meterFill"></div><span id="meterPct">0%</span></div>
+      <button class="tap-btn reveal" id="tapBtn">TAP<br><span>💖</span></button>
+      <p class="game-msg reveal" id="gameMsg">Ready? Start tapping!</p>
+      <div class="game-end step" id="gameEnd">
+        <div class="inf">∞</div>
+        <p class="big en">Koi baat nahi. Ye competition impossible tha.</p>
+        <p class="small muted">Beta skill issue hai tujhee aaja bhidle 😌</p>
+      </div>
+      <button class="btn step" id="gameNext" data-next>Next ›</button>
+    </div>
+  </section>
+
+  <!-- 8 · PALAT + PROPOSAL -->
+  <section class="scene" data-scene="palat">
+    <div class="wrap">
+      <div class="flip reveal" id="flip">
+        <div class="flip-inner">
+          <div class="face front">
+            <div class="silhouette">🧍‍♂️</div>
+            <p class="quote-big">“Agar woh mujhe pyaar karti hai… toh palat ke dekhegi.”</p>
+            <p class="palat filmy">Palat…Palat. Palat na BC!! <span class="emo">👀</span></p>
+            <p class="hint">tap the card</p>
+          </div>
+          <div class="face back">
+            <p class="small muted">Geet ne kaha tha, “Main apni favourite hoon.”</p>
+            <p class="script fav">Aur tum meri favourite ho.</p>
+            <p class="en">I love you yaar Crazyyy waaala , mtlb craziest crazy…</p>
+            <h2 class="filmy ask"><span class="her"></span>, can i be your boyfriend?</h2>
+            <button class="btn primary" id="yesBtn">Kaho Naa… Haan Hai 💖</button>
+            <button class="btn ghost" id="thinkBtn">Let me think 🙂</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 · YES -->
+  <section class="scene" data-scene="yes">
+    <div class="wrap">
+      <h1 class="filmy title reveal">Mogambo<br>khush hua! <span class="emo">🕶️</span></h1>
+      <p class="en big reveal">Chal kissi de ab 💋.</p>
+      <div class="ticket reveal">
+        <div class="t-main">
+          <p class="t-brand">🎬 DANDIYA TALKIES</p>
+          <p class="t-title"><span class="her"></span> &amp; <span class="me"></span></p>
+          <div class="t-grid">
+            <div><small>ADMIT</small><b>2</b></div>
+            <div><small>SHOW</small><b>Forever</b></div>
+            <div><small>SEAT</small><b>Next to me</b></div>
+            <div><small>SCREEN</small><b>DDLJ (dilwaale doxxab le jaenge)</b></div>
+          </div>
+        </div>
+        <div class="t-stub"><small>NO.</small><b>143</b><small>Redeemable for one real date 🍿</small></div>
+      </div>
+      <p class="hint reveal">📸 Screenshot this ticket, it's redeemable!</p>
+      <button class="btn reveal" data-next>Roll the credits 🎞️</button>
+    </div>
+  </section>
+
+  <!-- 10 · CREDITS -->
+  <section class="scene" data-scene="credits">
+    <div class="credits-wrap">
+      <div class="credits-roll" id="roll">
+        <p class="c-title filmy">Ajab Prem Ki Ghazab Kahani 2</p>
+        <p class="c-sub">Dandiya Edition</p>
+        <div class="c"><span>Starring</span><b>Dr. <span class="her"></span></b><i>as the girl who stole the show</i></div>
+        <div class="c"><span>And</span><b class="me"></b><i>as the guy who couldn't stop looking</i></div>
+        <div class="c-photos"><div data-photo="8"></div><div data-photo="9"></div><div data-photo="10"></div></div>
+        <div class="c"><span>Best Smile</span><b>Dr. <span class="her"></span></b></div>
+        <div class="c"><span>Background Music</span><b>My heartbeat</b><i>(143 BPM, dangerously high)</i></div>
+        <div class="c"><span>Location</span><b>One unforgettable dandiya night</b></div>
+        <div class="c"><span>Medical Advisor</span><b>Munna Bhai MBBS</b></div>
+        <div class="c"><span>Multiverse Consultant</span><b>Doctor Strange</b></div>
+        <div class="c"><span>Special Effects</span><b>Tere Naina</b></div>
+        <div class="c"><span>Stunts</span><b>Me, trying to act normal around you</b></div>
+        <div class="c"><span>Comedy Department</span><b>Me im funny one na . Aaja bhidle</b></div>
+        <div class="c"><span>Catering</span><b>Interval samosas 🥟. But non veg ofc</b></div>
+        <div class="c-photos"><div data-photo="11"></div><div data-photo="2"></div><div data-photo="1"></div></div>
+        <div class="c"><span>Special Thanks</span><b>Priyanshi</b></div>
+        <p class="c-note">No hearts were harmed in the making of this film.<br>One was stolen, though. 💘</p>
+        <p class="c-end filmy">The End?</p>
+      </div>
+    </div>
+    <button class="btn primary pulse step post-btn" id="postBtn" data-next>Wait… ek last cheez 👀</button>
+  </section>
+
+  <!-- 11 · POST-CREDITS SONG -->
+  <section class="scene" data-scene="post">
+    <div class="wrap">
+      <p class="eyebrow reveal">Post-credits scene</p>
+      <h2 class="filmy reveal"><span class="her"></span> FM <span class="emo">🎙️</span></h2>
+      <p class="sub reveal">A song dedication, sung (badly, but with full dil) by <span class="me"></span></p>
+      <div class="vinyl reveal" id="vinyl"><div class="label"><div data-photo="12"></div></div></div>
+      <button class="btn primary reveal" id="playBtn">▶ Play my song</button>
+      <div class="audio-bar reveal"><div id="audioFill"></div></div>
+      <p class="small muted" id="songNote"></p>
+      <p class="script fav reveal" id="finalLine">Tum meri favourite ho. Always. 💖. Take care, else i will 💋🧿</p>
+      <button class="btn ghost small reveal" id="replay">↺ Watch again</button>
+    </div>
+  </section>
+
+</main>
+
+<div id="flash"></div>
+<canvas id="fx"></canvas>
+
+<div id="sheet" class="sheet" aria-hidden="true">
+  <div class="sheet-backdrop"></div>
+  <div class="sheet-panel" role="dialog">
+    <div class="sheet-grab"></div>
+    <div id="sheetBody"></div>
+    <button class="btn" id="sheetClose">Close</button>
+  </div>
+</div>
+
+<audio id="song" preload="none"></audio>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
